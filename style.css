@@ -1,0 +1,91 @@
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+::-webkit-scrollbar {
+  width: 0;
+}
+
+body {
+  background: #212121;
+}
+.container {
+  width: 100%;
+  height: 100vh;
+  max-width: 300px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+button {
+  flex: 0 auto;
+  display: block;
+  width: 100%;
+
+  margin: 10px 0;
+  border: 0;
+  padding: 12px;
+  outline: 0;
+  border-radius: 10px;
+  font-size: 19px;
+  background: transparent;
+  height: auto;
+  cursor: pointer;
+  color: #fff;
+}
+.button {
+  background: #8774e1;
+}
+.button2 {
+  color: #8774e1;
+  background: rgb(135, 116, 225, 0.1);
+}
+.button3 {
+  color: #8774e1;
+}
+.button3:hover {
+  color: #8774e1;
+  background: rgb(135, 116, 225, 0.1);
+}
+.button5 {
+  color: #8774e1;
+}
+
+.ripple {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  overflow: hidden;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  border-radius: inherit;
+  pointer-events: none;
+}
+.rippleWave {
+  backface-visibility: hidden;
+  position: absolute;
+  border-radius: 50%;
+  transform: scale(0.7);
+  -webkit-transform: scale(0.7);
+  background: rgba(255, 255, 255, 1);
+  opacity: 0.45;
+  animation: ripple 2s forwards;
+  -webkit-animation: ripple 2s forwards;
+}
+
+@keyframes ripple {
+  to {
+    transform: scale(24);
+    opacity: 0;
+  }
+}
+@-webkit-keyframes ripple {
+  to {
+    -webkit-transform: scale(24);
+    opacity: 0;
+  }
+}
